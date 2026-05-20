@@ -7,8 +7,14 @@ using namespace std;
 
 int main() {
     fast();
+    in("DAOCHU");
+    out("DAOCHU");
     
-    while ()
+    int n; cin >> n;
+    while (n--) {
+        pair<string, string> s; cin >> s.first >> s.second;
+        cout << s.second << " " << s.first << endl;
+    }
     
     return 0;
 }
