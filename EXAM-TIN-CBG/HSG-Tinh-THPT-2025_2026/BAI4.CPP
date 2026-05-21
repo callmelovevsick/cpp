@@ -8,7 +8,26 @@ using namespace std;
 int main() {
     fast();
     
-    
-    
+    int n, k; cin >> n >> k;
+    const long long INF = 1e15;
+    vector<int> a(k);
+    for (int i = 0; i < k; i++) {
+        cin >> a[i];
+    }
+    vector<int> dp(n + 1, INF);
+    dp[0] = 0;
+    for (int j = 0; j < k; j++) {
+        for (int i = a[j]; i <= n; i++) {
+            if (dp[i - a[j]] != INF) {
+                dp[i] = min(dp[i], dp[i - a[j]] + 1);
+            }
+        }
+    }
+    if (dp[n] == INF) {
+        cout << -1; 
+    } else {
+        cout << dp[n]; 
+    }
+
     return 0;
 }
