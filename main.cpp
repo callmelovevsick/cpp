@@ -8,7 +8,16 @@ using namespace std;
 int main() {
     fast();
     
-    while ()
+    int n; cin >> n;
+    map<int, string> m;
+    for (int i = 0; i < n; i++) {  
+        int x; string s; cin >> x >> s;
+        m[x] = s;
+    }
+    int lo = 50, hi = 90;
+    for (auto it = m.lower_bound(lo); it != m.upper_bound(hi); it++) {
+        cout << it->first << " " << it->second << "\n";
+    }
     
     return 0;
 }
