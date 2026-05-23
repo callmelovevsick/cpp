@@ -5,19 +5,27 @@ using namespace std;
 #define in(file) freopen(file ".inp", "r", stdin);
 #define out(file) freopen(file ".out", "w", stdout);
 
+const int MAXN = 1e6 + 5;
+bool is_prime[MAXN];          
+
+void sang(int n) {
+    fill(is_prime, is_prime + n + 1, true);
+    is_prime[0] = is_prime[1] = false;
+
+    for (int i = 2; (long long)i * i <= n; i++) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= n; j += i)
+                is_prime[j] = false;  
+        }
+    }
+}
+
 int main() {
     fast();
     
-    int n; cin >> n;
-    map<int, string> m;
-    for (int i = 0; i < n; i++) {  
-        int x; string s; cin >> x >> s;
-        m[x] = s;
-    }
-    int lo = 50, hi = 90;
-    for (auto it = m.lower_bound(lo); it != m.upper_bound(hi); it++) {
-        cout << it->first << " " << it->second << "\n";
-    }
+    int n = 5189;
+    sang(n);
+    cout << is_prime[n] << endl;
     
     return 0;
 }
