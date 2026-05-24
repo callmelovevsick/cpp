@@ -8,7 +8,13 @@ using namespace std;
 int main() {
     fast();
     
-    
+    string s; cin >> s;
+    int n; cin >> n;
+    while (n--) {
+        int i, j; cin >> i >> j;
+        swap(s[i-1], s[j-1]);
+    }
+    cout << s;
     
     return 0;
 }

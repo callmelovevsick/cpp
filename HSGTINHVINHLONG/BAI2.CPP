@@ -16,7 +16,7 @@ int main() {
     for (int &x : a) cin >> x;
     while (k--) {
         int x, y; cin >> x >> y;
-        for (int i = x; i <= y; i++) {
+        for (int i = x; i <= y; i++) 
             if (a[i] == 1) dem1++;
                 else if (a[i] == 2) dem2++;
                     else if (a[i] == 3) dem3++;
