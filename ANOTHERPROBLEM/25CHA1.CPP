@@ -17,12 +17,18 @@ int sum(int n) {
 int main() {
     fast();
     
-    long long k; cin >> k;
-    long long s = 0;
-    for (long long i = 1; i < k ;i++) {
-        if (sum(i) % 9 == 0) s += i;
+    long long n; cin >> n;
+    long long price = 0;
+    if (n <= 10) {
+        price = n * 20000;
+    } 
+    else if (n <= 50) {
+        price = (10 * 20000) + ((n - 10) * 18000);
+    } 
+    else {
+        price = (10 * 20000) + (40 * 18000) + ((n - 50) * 15000);
     }
-    cout << s;
+    cout << price << "\n";
     
     return 0;
 }
