@@ -5,24 +5,10 @@ using namespace std;
 #define in(file) freopen(file ".inp", "r", stdin);
 #define out(file) freopen(file ".out", "w", stdout);
 
-int sum(int n) {
-    int s = 0;
-    while (n > 0) {
-        s += n % 10;
-        n /= 10;
-    }
-    return s;
-}
-
 int main() {
     fast();
     
-    long long k; cin >> k;
-    long long s = 0;
-    for (long long i = 1; i < k ;i++) {
-        if (sum(i) % 9 == 0) s += i;
-    }
-    cout << s;
+    
     
     return 0;
 }
