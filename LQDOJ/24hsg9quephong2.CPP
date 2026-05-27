@@ -5,27 +5,32 @@ using namespace std;
 #define in(file) freopen(file ".inp", "r", stdin);
 #define out(file) freopen(file ".out", "w", stdout);
 
-const int N = 1e6+5;
-int d[N];
-
-void dem(int n) {
-    for (int i = 1; i <= n; i++) {
-        for (int j = i; j <= n; j += i) {
-            d[j]++;
+const int MAXN = 1e6+5;
+vector<bool> prime(MAXN+1, true);
+void sang() {
+    prime[0] = prime[1] = false;
+    for (long long i = 2; i*i < MAXN; i++) {
+        if (prime[i]) {
+            for (long long j = i*i; j < MAXN; j += i) {
+                prime[j] = false;
+            }
         }
     }
 }
 
 int main() {
     fast();
-    
-    long long n; cin >> n;
-    vector<long long> a(n);
-    dem(n);
-    for (auto &x : a) {
-        cin >> x;
-        if (d[x] == 3) cout << "YES" << endl;
-            else cout << "NO" << endl;
+    sang();
+
+    int n; cin >> n;
+    while (n--) {
+        long long a;
+        cin >> a;
+        long long x = sqrtl(a);
+        if (x * x == a && prime[x])
+            cout << "YES\n";
+        else
+            cout << "NO\n";
     }
     
     return 0;
