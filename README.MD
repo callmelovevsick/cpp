@@ -1,50 +1,98 @@
 <div align="center">
 
-  <img src="https://i.pinimg.com/736x/a2/83/06/a28306ea388835db71100f0278375593.jpg" width="80" style="border-radius: 30px;" alt="logo">
+<!-- Animated header banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=Competitive%20Programming&fontSize=38&fontColor=ffffff&fontAlignY=38&desc=Solutions%20across%20Online%20Judges&descSize=16&descAlignY=58&animation=fadeIn" width="100%"/>
 
-  # Competitive Programming Solutions
+<!-- Avatar with glow border -->
+<br/>
 
-  _A collection of solutions in some ONLINE JUDGES_
+<img src="https://i.pinimg.com/736x/a2/83/06/a28306ea388835db71100f0278375593.jpg"
+     width="110"
+     style="border-radius: 50%;"
+     alt="avatar"/>
 
-  [![LeQuyDon-OJ](https://img.shields.io/badge/LeQuyDon--OJ-blue?style=flat-square)](https://lqdoj.edu.vn/)
-  [![MarisaOJ](https://img.shields.io/badge/MarisaOJ-pink?style=flat-square)](https://marisaoj.com/)
-  [![VNOI](https://img.shields.io/badge/VNOI-green?style=flat-square)](https://oj.vnoi.info)
-  [![ClueOJ](https://img.shields.io/badge/ClueOJ-purple?style=flat-square)](https://oj.clue.edu.vn/)
+<br/><br/>
+
+<!-- Typing animation -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=500&lines=Hello%2C+World!+%F0%9F%91%8B;I+solve+competitive+problems...;On+multiple+Online+Judges+%F0%9F%8F%86;Let%27s+code+together!" alt="Typing SVG"/>
+
+<br/><br/>
+
+<!-- Badges -->
+![GitHub last commit](https://img.shields.io/github/last-commit/callmelovevsick/cpp?style=flat-square&color=a78bfa&labelColor=1e1b4b)
+![GitHub stars](https://img.shields.io/github/stars/callmelovevsick/cpp?style=flat-square&color=f59e0b&labelColor=1e1b4b)
+![Profile views](https://komarev.com/ghpvc/?username=callmelovevsick&style=flat-square&color=a78bfa&label=PROFILE+VIEWS)
 
 </div>
 
 ---
 
+<div align="center">
+
 ## Online Judges
 
-<table>
+_Click vào từng judge để xem profile_
+
+</div>
+
+<br/>
+
+<table align="center">
   <tr>
-    <td width="50%">
-      <b>LeQuyDon-OJ</b><br>
-      <sub>THPT Chuyên Lê Qúy Đôn</sub>
+    <td align="center" width="200">
+      <a href="https://lqdoj.edu.vn/">
+        <img src="https://img.shields.io/badge/─────────────-1e1b4b?style=for-the-badge" width="0"/>
+        <br/>
+        <img src="https://img.shields.io/badge/LQDOJ-Lê%20Quý%20Đôn%20OJ-6d28d9?style=for-the-badge&logo=codeforces&logoColor=white"/>
+      </a>
+      <br/><sub>High-school judge</sub>
     </td>
-    <td width="50%">
-      <b>MarisaOJ</b><br>
-      <sub>Competitive problems</sub>
+    <td align="center" width="200">
+      <a href="https://marisaoj.com/">
+        <img src="https://img.shields.io/badge/MARISAOJ-Competitive%20Arena-ec4899?style=for-the-badge&logo=leetcode&logoColor=white"/>
+      </a>
+      <br/><sub>Battle-style problems</sub>
     </td>
   </tr>
   <tr>
-    <td>
-      <b>VNOI</b><br>
-      <sub>Vietnam OJ community</sub>
+    <td align="center" width="200">
+      <a href="https://oj.vnoi.wiki/">
+        <img src="https://img.shields.io/badge/VNOI-Vietnam%20OJ-16a34a?style=for-the-badge&logo=hackerrank&logoColor=white"/>
+      </a>
+      <br/><sub>Vietnam community</sub>
     </td>
-    <td>
-      <b>ClueOJ</b><br>
-      <sub>THPT Chuyên Nguyễn Huệ</sub>
+    <td align="center" width="200">
+      <a href="https://oj.clue.edu.vn/">
+        <img src="https://img.shields.io/badge/CLUEOJ-Clue%20Judge-0891b2?style=for-the-badge&logo=hackerearth&logoColor=white"/>
+      </a>
+      <br/><sub>High-school judge</sub>
     </td>
   </tr>
 </table>
 
-> [!NOTE]
-> ~~High school problems also included~~ — archived
+<br/>
 
 ---
 
 <div align="center">
-Thank you for your interest !
+
+## Stats
+
+<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&icon_color=a78bfa&text_color=e2e8f0&ring_color=a78bfa" height="160"/>
+&nbsp;&nbsp;
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight&hide_border=true&background=0d0d1a&ring=a78bfa&fire=f59e0b&currStreakLabel=a78bfa" height="160"/>
+
+</div>
+
+---
+
+<div align="center">
+
+> ~~And another problem of some high school~~ — _archived, focusing on OJs only now_
+
+<br/>
+
+<!-- Animated footer -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=120&section=footer&animation=fadeIn" width="100%"/>
+
 </div>
