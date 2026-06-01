@@ -8,11 +8,9 @@ using namespace std;
 int main() {
     fast();
     
-    char c; cin >> c;
-    if (isupper(c)) {
-        cout << char(tolower(c));
-    } else {
-        cout << char(toupper(c));
+    string s; getline(cin, s);
+    for (int i = 0; i < 3; i++) {
+        cout << s << endl;
     }
     
     return 0;

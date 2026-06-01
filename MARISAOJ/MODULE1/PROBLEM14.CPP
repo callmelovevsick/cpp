@@ -8,11 +8,13 @@ using namespace std;
 int main() {
     fast();
     
-    char c; cin >> c;
-    if (isupper(c)) {
-        cout << char(tolower(c));
+    char a, b; cin >> a >> b;
+    a = tolower(a);
+    b = tolower(b);
+    if((int(b - 1)) == (int)a){
+        cout << 0;
     } else {
-        cout << char(toupper(c));
+        cout << (int)(b - 1) - (int)(a);
     }
     
     return 0;
