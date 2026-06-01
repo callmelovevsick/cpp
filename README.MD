@@ -14,7 +14,7 @@
 <br/><br/>
 
 <!-- Typing animation -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=500&lines=Hello%2C+World!+%F0%9F%91%8B;I+solve+competitive+problems...;On+multiple+Online+Judges+%F0%9F%8F%86;Let%27s+code+together!" alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=500&lines=Hello%2C+World!;I+solve+competitive+problems...;On+multiple+Online+Judges;Let%27s+code+together!" alt="Typing SVG"/>
 
 <br/><br/>
 
