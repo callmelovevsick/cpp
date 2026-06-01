@@ -27,11 +27,22 @@
 
 ---
 
+
+<div align="center">
+
+## Stats
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=callmelovevsick&theme=tokyonight&hide_border=true&background=0d0d1a&ring=a78bfa&fire=f59e0b&currStreakLabel=a78bfa" height="160"/>
+
+</div>
+
+---
+
 <div align="center">
 
 ## Online Judges
 
-_Click vào từng judge để xem profile_
+_Click to code_
 
 </div>
 
@@ -71,18 +82,6 @@ _Click vào từng judge để xem profile_
 </table>
 
 <br/>
-
----
-
-<div align="center">
-
-## Stats
-
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0d1a&title_color=a78bfa&icon_color=a78bfa&text_color=e2e8f0&ring_color=a78bfa" height="160"/>
-&nbsp;&nbsp;
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=tokyonight&hide_border=true&background=0d0d1a&ring=a78bfa&fire=f59e0b&currStreakLabel=a78bfa" height="160"/>
-
-</div>
 
 ---
 
