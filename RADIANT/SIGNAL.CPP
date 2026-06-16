@@ -33,6 +33,5 @@ int main() {
         prev.swap(cur);
     }
     cout << answer << '\n';
-
     return 0;
 }
