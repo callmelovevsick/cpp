@@ -25,6 +25,8 @@ signed main() {
 	}
 	if (tmp.size() > maxs.size()) maxs = tmp;
 	s.erase(remove(s.begin(), s.end(), ' '), s.end());
-	cout << ans1 << endl << s << endl << maxs;
+	cout << ans1 << endl << s << endl;
+	if (maxs != "") cout << maxs;
+	else cout << "NO";
 	return 0;
 }
