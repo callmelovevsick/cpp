@@ -1,4 +1,4 @@
--- https://radiant.lovevsick.xyz/share/radiant
+// https://radiant.lovevsick.xyz/share/radiant
 #include <bits/stdc++.h>
 using namespace std;
 
