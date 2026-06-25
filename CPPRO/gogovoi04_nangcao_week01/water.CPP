@@ -8,11 +8,14 @@ using namespace std;
 
 signed main() {
 	fast();
-	string n; cin >> n;
-	reverse(n.begin(), n.end());
-	int pos = 0;
-    	while (pos < n.size() && n[pos] == '0') pos++;
-    	if (pos == n.size()) cout << 0;
-    	else cout << n.substr(pos);	
+	double x, y, z;
+    	cin >> x >> y >> z;
+    	double tocdo = 1.0 / x + 1.0 / y - 1.0 / z;
+    	if (tocdo <= 0) {
+        	cout << -1;
+        	return 0;
+    	}
+    	double tg = 1.0 / tocdo;
+    	cout << fixed << setprecision(6) << tg;	
 	return 0;
 }
