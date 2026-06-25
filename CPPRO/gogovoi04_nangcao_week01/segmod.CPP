@@ -9,6 +9,8 @@ using namespace std;
 const int MOD = 1e9+7;
 
 int power(int a, int n) {
+	if (b == 0) return 1;
+	if (b == 1) return a;
 	int ans = 1;
 	a %= MOD;
 	while (n != 0) {
