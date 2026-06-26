@@ -13,10 +13,10 @@ signed main() {
 	fast();
 	int a, b, c, n, m;
 	cin >> x[0] >> a >> b >> c >> n >> m;
-	for (int i = 0l i <= 100000; i++) xh[i] = -1;
+	for (int i = 0; i <= 100000; i++) xh[i] = -1;
 	xh[x[0]] = 0;
 	for (int i = 1; ; i++) {
-		x[i] = ((x[i-1] + a) * b - c +m) % m;
+		x[i] = ((x[i-1] + a) * c - b +m) % m;
 		if (x[i] < 0) x[i] += m;
 		if (xh[x[i]] != -1) {
 			int dodai = i - xh[x[i]];
@@ -24,7 +24,7 @@ signed main() {
 			cout << x[id];
 			return 0;
 		}
-	xh[x[i]] = i;
+		xh[x[i]] = i;
 	}
 	return 0;
 }
