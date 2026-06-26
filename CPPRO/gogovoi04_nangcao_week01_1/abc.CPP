@@ -11,7 +11,7 @@ const int MOD = 1e9 + 7;
 signed main() {
 	fast();
 	int a, b, c; cin >> a >> b >> c;
-	if ((a % MOD * b % MOD) > c % MOD) cout << 1;
+	if (a > c / b) cout << 1;
 	else cout << 0;	
 	return 0;
 }
