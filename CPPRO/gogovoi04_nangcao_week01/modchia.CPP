@@ -6,19 +6,28 @@ using namespace std;
 #define out(file) freopen(file ".out", "w", stdout);
 #define int long long
 
-const int MOD = 1e9+7;
+const int MOD = 1e9 + 7;
+const int MAXN = 3000005; 
 
-int s(int n) {
-	int tmp = n % MOD;
-	return (tmp*(tmp+1)*(2*tmp+1))/6;
+int s[MAXN]; 
+
+void love() {
+    s[0] = 0;
+    for (int i = 1; i <= 3000000; ++i) {
+        int cur = (i * i) % MOD; 
+        s[i] = (s[i - 1] + cur) % MOD;
+    }
 }
 
 signed main() {
-	fast();
-	int t; cin >> t;
-	while (t--) {
-		int n; cin >> n;
-		cout << s(n) % MOD << endl;
-	}	
-	return 0;
+    fast();
+    love(); 
+    int t; 
+    if (cin >> t) {
+        while (t--) {
+            int n; cin >> n;
+            cout << s[n] << endl;
+        }
+    }
+    return 0;
 }
