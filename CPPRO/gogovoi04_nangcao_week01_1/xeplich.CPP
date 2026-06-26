@@ -6,12 +6,18 @@ using namespace std;
 #define out(file) freopen(file ".out", "w", stdout);
 #define int long long
 
-const int MOD = 1e9 + 7;
+int gcd(int a, int b) {
+	if (b == 0) return a;
+	return gcd(b, a % b);
+}
+
+int lcm(int a, int b) {
+	return a / gcd(a, b) * b;
+}
 
 signed main() {
 	fast();
-	int a, b, c; cin >> a >> b >> c;
-	if ((a % MOD * b % MOD) > c % MOD) cout << 1;
-	else cout << 0;	
+	int a, b; cin >> a >> b;
+	cout << lcm(a, b);	
 	return 0;
 }
