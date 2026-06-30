@@ -6,11 +6,13 @@ using namespace std;
 #define out(file) freopen(file ".out", "w", stdout);
 #define int long long
 
+int cnt[1000005];
+
 signed main() {
 	fast();
 	int n; cin >> n;
 	vector<int> a(n);
 	for (int i = 0; i < n; i++) cin >> a[i];
-		
+	
 	return 0;
 }
