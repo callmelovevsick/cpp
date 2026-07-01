@@ -6,31 +6,50 @@ using namespace std;
 #define out(file) freopen(file ".out", "w", stdout);
 #define int long long
 
-bool check(int n) {
-	if (n <= 1) return false;
-	if (n <= 3) return true;
-	if (n % 2 == 0 || n % 3 == 0) return false;
-	for (int i = 5; i * i <= n; i += 6) {
-		if (n % i == 0 || n % (i + 2) == 0) return false;
+vector<bool> prime;
+vector<int> sum;
+vector<int> cnt;
+
+void sang(int n) {
+	prime.resize(n + 1);
+	sum.resize(n + 1);
+	cnt.resize(n + 1);
+	fill(prime.begin(), prime.end(), true);
+	prime[0] = prime[1] = false;
+	for (int i = 2; i * i <= n; i++) {
+		if (prime[i]) {
+			for (int j = i * i; j <= n; j += i) {
+				prime[j] = false;
+			}
+		}
 	}
-	return true;
+	sum[0] = 0;
+	cnt[0] = 0;
+	for (int i = 1; i <= n; i++) {
+		sum[i] = sum[i-1];
+		cnt[i] = cnt[i-1];
+		if (prime[i]) {
+			sum[i] += i;
+			cnt[i]++;
+		}
+	}
 }
 
 signed main() {
 	fast();
 	int n; cin >> n;
-	int s = 0; int dem = 0;
-	while (n--) {
-		int a, b; cin >> a >> b;
-		for (int i = a; i <= b; i++) {
-			if (check(i)) {
-				s += i;
-				dem++;
-			}
-		}
-		cout << fixed << setprecision(2) << (double)s/dem << "\n";
-		s = 0;
-		dem = 0;
-	}			
+	vector<int> a(n), b(n);
+	int maxb = 0;
+	for (int i = 0; i < n; i++) {
+		cin >> a[i] >> b[i];
+		maxb = max(maxb, b[i]);
+	}
+	sang(maxb);
+	for (int i = 0; i < n; i++) {
+		int s = sum[b[i]] - sum[a[i] - 1];
+		int dem = cnt[b[i]] - cnt[a[i] - 1];
+		if (dem == 0) cout << "0.00\n";
+		else cout << fixed << setprecision(2) << (double)s/dem << "\n";
+	}		
 	return 0;
 }
