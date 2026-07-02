@@ -6,27 +6,24 @@ using namespace std;
 #define out(file) freopen(file ".out", "w", stdout);
 #define int long long
 
-bool nt(int n) {
-	if (n <= 1) return false;
-	if (n <= 3) return true;
-	if (n % 2 == 0 || n % 3 == 0) return false;
-	for (int i = 5; i * i <= n; i += 6) {
-		if (n % i == 0 || n % (i + 2) == 0) return false;
-	}
-	return true;
-}	
+int nt[1000005];
 
 signed main() {
 	fast();
-	int q; cin >> q;
-	int ans = 0;
-	while (q--) {
+	int t; cin >> t;
+	while (t--) {
 		int l, r; cin >> l >> r;
-		for (int i = l; i <= r; i++) {
-			if (nt(i)) ans++;
+		for (int i = 0; i < r - l + 1; i++) nt[i] = 0;
+		for (int i = 2; i * i <= r; i++) {
+			for (int j = max(i*i, (l+i-1)/i*i); j <= r; j += i) {
+				nt[j - l] = 1;
+			}
 		}
-		cout << ans << "\n";
-		ans = 0;
-	}	
+		int res = 0;
+		for (int i = 0; i < r - l + 1; i++) {
+			if (i+l >= 2 && nt[i] == 0) res++
+		}
+		cout << res << "\n";		
+	}
 	return 0;
 }
