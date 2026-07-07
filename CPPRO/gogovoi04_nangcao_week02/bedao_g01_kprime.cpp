@@ -4,15 +4,11 @@ using namespace std;
 #define fast() ios::sync_with_stdio(false); cin.tie(0);
 #define in(file) freopen(file ".inp", "r", stdin);
 #define out(file) freopen(file ".out", "w", stdout);
-#define int long long
 
-int cnt[1000005];
+int main() {
+    fast();
 
-signed main() {
-	fast();
-	int n; cin >> n;
-	vector<int> a(n);
-	for (int i = 0; i < n; i++) cin >> a[i];
-	
-	return 0;
+    int n, k; cin >> n >> k; 
+
+    return 0;
 }
