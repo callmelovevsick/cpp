@@ -22,12 +22,11 @@ void love() {
 signed main() {
     fast();
     love(); 
-    int t; 
-    if (cin >> t) {
-        while (t--) {
-            int n; cin >> n;
-            cout << s[n] << endl;
-        }
+    int t; cin >> t;
+    while (t--) {
+    	int n; cin >> n;
+        cout << s[n] << endl;
+        
     }
     return 0;
 }
