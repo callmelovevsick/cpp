@@ -22,7 +22,7 @@ int main() {
     long long tar = sum / 2;
     long long curr = 0;
     int count = 0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n-1; i++) {
         curr += a[i];
         if (curr == tar) count++;
     }
