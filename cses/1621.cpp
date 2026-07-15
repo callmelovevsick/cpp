@@ -1,16 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define fast() ios::sync_with_stdio(false); cin.tie(0);
+#define in(file) freopen(file ".inp", "r", stdin);
+#define out(file) freopen(file ".out", "w", stdout);
+using ll = long long;
+
 int main() {
-    
-    int a; cin >> a;
+    fast();
 
-    int B = a + 2025;
-
-    cout << B;
+    ll n; cin >> n;
+    vector<ll> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+    sort(a.begin(), a.end());
+    ll prev = a[0];
+    int dem;
+    for (int i = 0; i < n; i++) {
+        if (prev == a[i]) {
+            dem++;
+        } else {
+            prev = a[i];
+        }
+    }
+    cout << dem / 2;
 
     return 0;
 }
+
+
+
 
 
 

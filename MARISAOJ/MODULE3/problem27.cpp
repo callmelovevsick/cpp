@@ -1,16 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define fast() ios::sync_with_stdio(false); cin.tie(0);
+#define in(file) freopen(file ".inp", "r", stdin);
+#define out(file) freopen(file ".out", "w", stdout);
+
 int main() {
-    
-    int a; cin >> a;
+    fast();
 
-    int B = a + 2025;
-
-    cout << B;
+    int n; cin >> n;
+    vector<int> a(n);
+    long long ans = 0;
+    for (int i = 0; i < n; i++) cin >> a[i];
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            if (i < j) ans = max(a[i] * a[j], ans);
+        }
+    }
+    cout << ans;
 
     return 0;
 }
+
+
+
 
 
 

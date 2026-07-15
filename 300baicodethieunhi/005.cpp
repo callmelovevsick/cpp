@@ -1,16 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define fast() ios::sync_with_stdio(false); cin.tie(0);
+#define in(file) freopen(file ".inp", "r", stdin);
+#define out(file) freopen(file ".out", "w", stdout);
+
 int main() {
-    
-    int a; cin >> a;
+    fast();
 
-    int B = a + 2025;
-
-    cout << B;
+    long long a; cin >> a;
+    cout << a*a << "\n" << a*a*a*a*a;
 
     return 0;
 }
+
+
+
 
 
 

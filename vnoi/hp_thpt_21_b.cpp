@@ -1,16 +1,75 @@
 #include <bits/stdc++.h>
+#include <string>
 using namespace std;
 
+#define fast() ios::sync_with_stdio(false); cin.tie(0);
+#define in(file) freopen(file ".inp", "r", stdin);
+#define out(file) freopen(file ".out", "w", stdout);
+
+const int MAXN = 1e6+7;
+bool prime[MAXN];
+
+void sieve() {
+    fill(prime, prime+MAXN+1, true);
+    prime[0] = prime[1] = false;
+    for (int i = 2; i <= MAXN; i++) {
+        if (prime[i]) {
+            for (int j = i * i; j <= MAXN; j += i) {
+                prime[j] = false;
+            }
+        }
+    }
+}
+
+int tost(int n) {
+    string tmp = to_string(n);
+    tmp += 7 - '0';
+    return stoi(tmp);
+}
+
+bool xoa(int n){
+    string tmp = to_string(n);
+    for (int i = 0; i < tmp.size(); i++) {
+        if (prime[tmp[i]]) {
+            tmp[i] = tmp[i] - ((tmp.size() + i) - '0');
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool check(int n) {
+    if (!prime[n]) return false;
+    if (prime[tost(n)]) {
+        return 1;
+    } else return false;
+    if (xoa(n)) return true;
+    else return false;
+}
+
 int main() {
-    
-    int a; cin >> a;
+    fast();
 
-    int B = a + 2025;
-
-    cout << B;
+    int n; cin >> n;
+    sieve();
+    vector<int> a(n);
+    for (int i = 0; i < n; i++) cin >> a[i];
+    int t, ans = 0; cin >> t;
+    while (t--) {
+        int u, v; cin >> u >> v;
+        for (int i = u; i <= v; i++) {
+            if (check(a[i])) ans++;
+        }
+        cout << ans << endl;
+        ans = 0;
+    }
 
     return 0;
 }
+
+
+
 
 
 
