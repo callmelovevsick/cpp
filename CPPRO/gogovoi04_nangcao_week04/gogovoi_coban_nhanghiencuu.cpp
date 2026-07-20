@@ -8,9 +8,22 @@ using namespace std;
 int main() {
     LucKhanhVan;
 
-    int a,b,c;
-    cin >> a >> b >> c;
-    cout << fixed << setprecision(4) << (double)(21*(a*a)+5*(b*b))/(2009*(c*c)+15) << " " << (double)(sqrt((a*a)-2*b))/(3*(c*c)+4);
+    int n; cin >> n;
+    vector<int> a(n);
+    vector<int> pref(n+1, 0);
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        if (a[i] == 0) a[i] -= 1;
+    }
+    map <long long, int> mp;
+    int ans = 0;
+    mp[pref[0]] = 0;
+    for (int i = 0; i < n; i++) {
+        pref[i+1] = pref[i] + a[i];
+        if (mp.count(pref[i+1])) ans = max(ans, (int)((a.begin() + i) - (a.begin() + mp[pref[i+1]]) + 1));
+        else mp[pref[i+1]] = i + 1;
+    }    
+    cout << ans;
 
     return 0;
 }

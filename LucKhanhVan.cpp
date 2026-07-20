@@ -8,9 +8,20 @@ using namespace std;
 int main() {
     LucKhanhVan;
 
-    int a,b,c;
-    cin >> a >> b >> c;
-    cout << fixed << setprecision(4) << (double)(21*(a*a)+5*(b*b))/(2009*(c*c)+15) << " " << (double)(sqrt((a*a)-2*b))/(3*(c*c)+4);
+    string s = "Luc Khanh Van";
+    int kvcte = 0;
+    for (double y = 1.5; y > -1.5; y -= 0.1) {
+        for (double x = -1.5; x < 1.5; x += 0.05) {
+                double a = x * x + y * y - 1;
+                if (a * a * a - x * x * y * y * y <= 0) {
+                    cout << s[kvcte % s.size()];
+                    kvcte++;
+                } else {
+                    cout << " ";
+                }
+        }
+        cout << '\n';
+    }
 
     return 0;
 }

@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -5,12 +6,37 @@ using namespace std;
 #define in(file) freopen(file ".inp", "r", stdin);
 #define out(file) freopen(file ".out", "w", stdout);
 
+void yeukv() {
+    int n; cin >> n;
+    vector<long long> a(n);
+    long long max_sub1 = 0;
+    bool duong = false;
+    long long max_pt = -1e18;
+    for (int i = 0; i < n; i++){
+        cin >> a[i];
+        if (a[i] > 0) {
+            max_sub1 += a[i];
+            duong = true;
+        }
+        max_pt = max(a[i], max_pt);
+    }
+    if (!duong) max_sub1 = max_pt;
+    long long max_sub2 = a[0];
+    long long curr = a[0];
+    for (int i = 1; i < n; i++) {
+        curr = max(a[i], curr + a[i]);
+        max_sub2 = max(curr, max_sub2);
+    }
+    cout << max_sub1 << " " << max_sub2 << endl;
+}
+
 int main() {
     LucKhanhVan;
 
-    int a,b,c;
-    cin >> a >> b >> c;
-    cout << fixed << setprecision(4) << (double)(21*(a*a)+5*(b*b))/(2009*(c*c)+15) << " " << (double)(sqrt((a*a)-2*b))/(3*(c*c)+4);
+    int t;cin >> t;
+    while (t--) {
+        yeukv();
+    }
 
     return 0;
 }
