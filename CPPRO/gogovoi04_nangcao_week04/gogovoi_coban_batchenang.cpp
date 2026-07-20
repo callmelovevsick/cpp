@@ -1,26 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define fast() ios::sync_with_stdio(false); cin.tie(0);
+#define LucKhanhVan ios::sync_with_stdio(false); cin.tie(0);
 #define in(file) freopen(file ".inp", "r", stdin);
 #define out(file) freopen(file ".out", "w", stdout);
 
+const int MAXN = 60000;
+int pref[MAXN+5];
+
 int main() {
-    fast();
+    LucKhanhVan;
 
     int n; cin >> n;
-    vector<int> a(n);
-    map <long long, int> mp;
-    mp[0] = 1;
-    long long curr = 0;
-    long long count = 0;
-    for (int i = 0; i < n;  i++) {
-        cin >> a[i];
-        curr += a[i];
-        if (mp.count(curr)) count += mp[curr];
-        mp[curr]++;
+    for (int i = 0; i < n; i++) {
+        int l, r; cin >> l >> r;
+        pref[l]++;
+        pref[r]--;
     }
-    cout << count;
+    int ans, len, curr = 0;
+    for (int i = 0; i <= MAXN; i++) {
+        curr += pref[i];
+        if (curr > 0) {
+            len++;
+        } else {
+            ans = max(ans, len);
+            len = 0;
+        }
+    }
+    cout << ans;
 
     return 0;
 }
