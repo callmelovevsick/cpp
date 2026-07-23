@@ -27,41 +27,27 @@ void KhanhVan(string name = "") {
     }
 }
 
-const int N = 1e6 + 4;
-ll n, a[N], pref[N];
-bool prime[N];
+const int MAXN = 1e6+5;
+int d[MAXN], pref[MAXN];
+int l, r;
 void sieve() {
-    prime[0] = prime[1] = 1;
-    for  (int i = 2; i * i <= 1000000; i++) {
-        if (!prime[i]) {
-            for (int j = i * i; j <= 1000000; j += i) {
-                prime[j]  = 1;
-            }
-        }
+    FOR(i, 1, MAXN) {
+        for (int j = i; j <= MAXN; j += i) d[j]++;
     }
+    FOR(i, 1, MAXN) pref[i] = pref[i-1] + d[i];
 }
 
 void yeukv() {
-    int n; cin >> n;
-    FOR(i, 1, n) cin >> a[i];
-    ll mmin = 1e18;
-    sieve();
-    ll ans = -1e18;
-    FOR(i, 1, n) {
-        pref[i] = pref[i-1] + a[i];
-        if (!prime[i]) {
-            mmin = min(mmin, pref[i-1]);
-            ans = max(ans, pref[i] - mmin);
-        }
-    }
-    cout << ans;
+     cin >> l >> r;
+     cout << pref[r] - pref[l-1] << "\n";
 }
 
 int main() {
     KhanhVan("");
 
     int t = 1;
-    // cin >> t;
+    cin >> t;
+    sieve();
     while (t--) {
         yeukv();
     }
