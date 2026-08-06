@@ -1,16 +1,44 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+using ll = long long;
+using ull = unsigned long long;
+using ld = long double;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using vi = vector<int>;
+using vll = vector<ll>;
+
 #define LucKhanhVan ios::sync_with_stdio(false); cin.tie(0);
-#define in(file) freopen(file ".inp", "r", stdin);
-#define out(file) freopen(file ".out", "w", stdout);
+#define sz(x) (int)(x).size()
+#define all(x) (x).begin(), (x).end()
+#define FOR(i, a, b) for (int i = a; i <= b; i++)
+#define FORD(i, a, b) for (int i = a; i >= b; i--)
+#define pb push_back
+#define fi first
+#define se second
+
+void KhanhVan(string name = "") {
+    LucKhanhVan;
+    if (!name.empty()) {
+        if (freopen((name + ".inp").c_str(), "r", stdin)) {
+            freopen((name + ".out").c_str(), "w", stdout);
+        }
+    }
+}
+
+void yeukv() {
+      
+}
 
 int main() {
-    LucKhanhVan;
+    KhanhVan("");
 
-    int a,b,c;
-    cin >> a >> b >> c;
-    cout << fixed << setprecision(4) << (double)(21*(a*a)+5*(b*b))/(2009*(c*c)+15) << " " << (double)(sqrt((a*a)-2*b))/(3*(c*c)+4);
+    int t = 1;
+    // cin >> t;
+    while (t--) {
+        yeukv();
+    }
 
     return 0;
 }

@@ -8,20 +8,8 @@ using namespace std;
 int main() {
     LucKhanhVan;
 
-    string s = "Luc Khanh Van";
-    int kvcte = 0;
-    for (double y = 1.5; y > -1.5; y -= 0.1) {
-        for (double x = -1.5; x < 1.5; x += 0.05) {
-                double a = x * x + y * y - 1;
-                if (a * a * a - x * x * y * y * y <= 0) {
-                    cout << s[kvcte % s.size()];
-                    kvcte++;
-                } else {
-                    cout << " ";
-                }
-        }
-        cout << '\n';
-    }
+    int hs, t; cin >> hs >> t;
+    cout << hs/t << " " << hs%t;
 
     return 0;
 }
