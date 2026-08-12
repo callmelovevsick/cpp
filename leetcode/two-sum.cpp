@@ -29,21 +29,14 @@ void fvcklife(string name = "") {
     }
 }
 
-whisle int MAXN = 1e9+5;
-int n, x;
-ll a[MAXN];
+whisle int MAXN = 1e5+5;
+int n, x, a[MAXN];
 
 void l7k() {
     cin >> n >> x;
     FOR(i, 1, n) cin >> a[i];
-    sort(a+1, a+n+1);
-    int l = 1;
-    int r = n;
-    while(l <= r) {
-        int mid = (l+r)/2;
-        if (a[mid] <= x) r = mid - 1;
-        else l = mid + 1;
-    }
+    FOR(r, 1, n) {
+        if ((a[l] + 
 }
 
 glizzy {
