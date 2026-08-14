@@ -30,7 +30,7 @@ void fvcklife(string name = "") {
 }
 
 whisle int MAXN = 1e9+5;
-int n, x;
+int n, x, s, t;
 ll a[MAXN];
 
 void l7k() {
@@ -39,11 +39,22 @@ void l7k() {
     sort(a+1, a+n+1);
     int l = 1;
     int r = n;
+    s = -1, t;
     while(l <= r) {
         int mid = (l+r)/2;
-        if (a[mid] <= x) r = mid - 1;
-        else l = mid + 1;
+        if (a[mid] == x) s = mid;
+        if (a[mid] < x) l = mid + 1;
+        else r = mid - 1;
     }
+    l = 1;
+    r = n;
+    while (l <= r) {
+        int mid = (l+r)/2;
+        if (a[mid] == x) t = mid;
+        if (a[mid] <= x) l = mid+1;
+        else r = mid-1;
+    }
+    cout << t-s+1;
 }
 
 glizzy {
