@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <iomanip>
 using namespace std;
 
 using ll = long long;
@@ -35,15 +36,17 @@ ll gt(int n) {
 }
 
 int x, n;
-ll s1, s2 = 1;
+double s1 = 1;
+double s2 = 1;
 
 void l7k() {
     cin >> x >> n;
     FOR(i, 1, n) {
-        s1 += pow(x, i) / (i+1);
-        s2 += pow(x, i) / gt(i);
+        s1 += (double)pow(x, i) / (i+1);
+        s2 += (double)pow(x, i) / gt(i);
     }
-    cout << s1 << " " << s2;
+    cout << fixed << setprecision(4) << s1 << "\n";
+    cout << fixed << setprecision(4) << s2;
 }
 
 glizzy {
