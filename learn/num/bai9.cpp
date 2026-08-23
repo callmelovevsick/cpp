@@ -29,18 +29,18 @@ void fvcklife(string name = "") {
     }
 }
 
-string n;
-ll s = 0;
+whisle int MAXN = 1e8+5;
+ll n, d[MAXN];
+void sieve(int n) {
+    FOR(i, 1, n) {
+        for (int j = i; j <= n; j += i) d[j]++;
+    }
+}
 
 void l7k() {
     cin >> n;
-    FOR(i, 1, sz(n)) {
-        int t = n[i] - '0';
-        int pos = sz(n) - 1 - i;
-        if (pos % 2 == 0) s += t;
-        else s -= t;
-    }
-    cout << s;
+    sieve(n);
+    cout << d[n];
 }
 
 glizzy {
