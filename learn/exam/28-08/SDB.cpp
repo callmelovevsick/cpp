@@ -36,7 +36,7 @@ void sieve() {
     for (int i = 2; i <= MAXN; i++) {
         if (!nt[i]) {
             for (int j = 2 * i; j <= MAXN; j += i) nt[j] = 1;
-            sq.push_back(1LL*i*i);
+            sq.pb(1LL*i*i);
         }
     }
 }
