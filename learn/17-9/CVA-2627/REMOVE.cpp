@@ -59,14 +59,15 @@ void l7k() {
             int psr = r - L;
             ll x = pref[S][psr + 1] - pref[S][psl];
             if (x > best) {
-                best = x; ansl = l; ansr = r;
+                best = x; 
+                ansl = l; 
+                ansr = r;
             }
         }
     }
     int x = ansl - 1;
     int y = n - ansr;
-    cout << x << " " << y << '\n';
-    cout << best << '\n';
+    cout << x << " " << y << '\n' << best;
 }
 
 glizzy {
